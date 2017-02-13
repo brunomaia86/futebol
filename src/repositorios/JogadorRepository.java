@@ -32,7 +32,7 @@ public class JogadorRepository {
 		this.manager.remove(jogador);
 	}
 	
-	public List<Jogador> getList() {
+	public List<Jogador> getLista() {
 		Query query = this.manager.createQuery("select x from Jogador x");
 		return query.getResultList();
 	}
