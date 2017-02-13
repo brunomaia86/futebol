@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+<title>K19 - Futebol</title>
+</head>
+
+<body>
+	<h:outputStylesheet library="css" name="style.css" />
+
+	<div id="header">
+		<h:form style="float:left;">
+			<h:link value="Times" outcome="times" />
+			&nbsp;
+			<h:link value="Jogadores" outcome="Jogadores" />
+		</h:form>
+		<h:graphicImage library="imagens" name="k19-logo.png" style="float:right;" />
+		<div style="clear: both"></div>
+	</div>
+
+
+	<div id="content">
+		<ui:insert name="content">
+    	Content area.  See comments below this line in the source.
+    	<!--  include your content file or uncomment the include below and create content.xhtml in this directory -->
+			<!-- <div> -->
+			<!-- <ui:include src="content.xhtml"/> -->
+			<!-- </div> -->
+		</ui:insert>
+	</div>
+
+	<div id="footer" style="text-align: center">
+		<hr />
+		&copy; 2012 k19. Todos os direitos reservados.
+	</div>
+</body>
+
+</html>

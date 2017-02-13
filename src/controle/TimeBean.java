@@ -29,6 +29,17 @@ public class TimeBean {
 		this.time = new Time();
 		this.times = null;
 	}
+	
+	public void adicionaTeste(Time time) {
+		EntityManager manager = this.getManager();
+		TimeRepository repository = new TimeRepository(manager);
+		if (this.time.getId() == null)
+			repository.adiciona(time);
+		else
+			repository.atualiza(time);
+		this.time = new Time();
+		this.times = null;
+	}
 
 	public void preparaAlteracao() {
 		Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getInitParameterMap();
